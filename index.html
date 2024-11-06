@@ -1,0 +1,259 @@
+<html><head><base href="https://websim-teacher.example.com/">
+    <title>Ms. Eman's ICT Classroom</title>
+    <style>
+      :root {
+        --primary: #1a237e;
+        --secondary: #0d47a1;
+        --accent: #002171;
+        --light-blue: #bbdefb;
+        --dark: #000000;
+      }
+      
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(135deg, var(--light-blue) 0%, #ffffff 100%);
+      }
+    
+      header {
+        background: linear-gradient(45deg, var(--primary), var(--secondary));
+        color: white;
+        padding: 2rem;
+        text-align: center;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      }
+    
+      header h1 {
+        margin: 0;
+        font-size: 2.5em;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+      }
+    
+      nav {
+        background: var(--accent);
+        padding: 1rem;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      }
+    
+      nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+      }
+    
+      nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        padding: 0.8rem 1.5rem;
+        border-radius: 25px;
+        transition: all 0.3s ease;
+        background: transparent;
+        border: 2px solid transparent;
+      }
+    
+      nav a:hover {
+        background: var(--light-blue);
+        color: var(--dark);
+        border-color: var(--primary);
+        transform: translateY(-2px);
+      }
+    
+      .hero {
+        background: linear-gradient(rgba(26,35,126,0.8), rgba(13,71,161,0.8)),
+                    url('classroom.jpg');
+        background-size: cover;
+        background-position: center;
+        height: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+    
+      .hero::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: radial-gradient(circle at center, transparent 0%, rgba(0,0,0,0.3) 100%);
+      }
+    
+      .hero-content {
+        position: relative;
+        z-index: 1;
+        animation: fadeInUp 1s ease-out;
+      }
+    
+      .content {
+        max-width: 1400px;
+        margin: 3rem auto;
+        padding: 0 2rem;
+      }
+    
+      .courses {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2.5rem;
+        margin-top: 3rem;
+      }
+    
+      .course-card {
+        background: white;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        transition: all 0.4s ease;
+        border: 1px solid var(--light-blue);
+      }
+    
+      .course-card:hover {
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+      }
+    
+      .course-content {
+        padding: 2rem;
+        background: linear-gradient(180deg, white 0%, var(--light-blue) 200%);
+      }
+    
+      .course-card h3 {
+        color: var(--primary);
+        margin-top: 0;
+        font-size: 1.8em;
+        border-bottom: 2px solid var(--secondary);
+        padding-bottom: 0.5rem;
+      }
+    
+      .btn {
+        display: inline-block;
+        padding: 1rem 2rem;
+        background: linear-gradient(45deg, var(--primary), var(--secondary));
+        color: white;
+        text-decoration: none;
+        border-radius: 25px;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      }
+    
+      .btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        background: linear-gradient(45deg, var(--secondary), var(--primary));
+      }
+    
+      footer {
+        background: linear-gradient(45deg, var(--dark), var(--primary));
+        color: white;
+        text-align: center;
+        padding: 2rem;
+        margin-top: 3rem;
+      }
+    
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+    </head>
+    <body>
+      <header>
+        <h1>Welcome to Ms. Eman's ICT Classroom</h1>
+      </header>
+    
+      <nav>
+        <ul>
+          <li><a href="https://websim-teacher.example.com/">Home</a></li>
+          <li><a href="https://websim-teacher.example.com/courses">Courses</a></li>
+          <li><a href="https://websim-teacher.example.com/resources">Resources</a></li>
+          <li><a href="https://websim-teacher.example.com/assignments">Assignments</a></li>
+          <li><a href="https://websim-teacher.example.com/contact">Contact</a></li>
+        </ul>
+      </nav>
+    
+      <div class="hero">
+        <div class="hero-content">
+          <h2>Empowering Students Through Technology</h2>
+          <p>Discover the exciting world of Information and Communication Technology</p>
+        </div>
+      </div>
+    
+      <div class="content">
+        <h2>Featured Courses</h2>
+        <div class="courses">
+          <div class="course-card">
+            <div class="course-content">
+              <h3>Introduction to Programming</h3>
+              <p>Learn the basics of programming with Python. Perfect for beginners!</p>
+              <a href="https://websim-teacher.example.com/courses/intro-programming" class="btn">Learn More</a>
+            </div>
+          </div>
+    
+          <div class="course-card">
+            <div class="course-content">
+              <h3>Web Development</h3>
+              <p>Master HTML, CSS, and JavaScript to create amazing websites.</p>
+              <a href="https://websim-teacher.example.com/courses/web-development" class="btn">Learn More</a>
+            </div>
+          </div>
+    
+          <div class="course-card">
+            <div class="course-content">
+              <h3>Digital Literacy</h3>
+              <p>Essential computer skills for the modern digital world.</p>
+              <a href="https://websim-teacher.example.com/courses/digital-literacy" class="btn">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <footer>
+        <p>&copy; 2024 Ms. Eman's ICT Classroom. All rights reserved.</p>
+      </footer>
+    
+      <script>
+        // Add smooth scrolling to navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+          anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const href = this.getAttribute('href');
+            window.location.href = href;
+          });
+        });
+    
+        // Add animation to course cards on scroll
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.style.opacity = 1;
+              entry.target.style.transform = 'translateY(0)';
+            }
+          });
+        });
+    
+        document.querySelectorAll('.course-card').forEach(card => {
+          card.style.opacity = 0;
+          card.style.transform = 'translateY(20px)';
+          card.style.transition = 'opacity 0.5s, transform 0.5s';
+          observer.observe(card);
+        });
+      </script>
+    </body></html>
